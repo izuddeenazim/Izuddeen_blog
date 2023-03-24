@@ -23,7 +23,7 @@ app.secret_key = os.getenv("SECRET_KEY")
 
 # connect to database
 db = SQLAlchemy()
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///blogs.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 db.init_app(app)
 
 # migrate database
