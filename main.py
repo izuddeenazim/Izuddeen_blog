@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for, flash, session, abort
 from flask_sqlalchemy import SQLAlchemy
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
@@ -13,12 +14,12 @@ from flask_migrate import Migrate
 from flask_gravatar import Gravatar
 
 
-MY_EMAIL = "fahuayaro@gmail.com"
-MY_PASSWORD = "wjxgtdpaqioiewsj"
+MY_EMAIL = os.environ["EMAIL"]
+MY_PASSWORD = os.environ["EMAIL_PASSWORD"]
 
 # initialize flask app
 app = Flask(__name__)
-app.secret_key = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.secret_key = '8BYkEfBA6O6donzWlSi&^%khBXox7C0sskKJG'
 
 # connect to database
 db = SQLAlchemy()
