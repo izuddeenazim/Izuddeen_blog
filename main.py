@@ -14,7 +14,7 @@ from flask_migrate import Migrate
 from flask_gravatar import Gravatar
 
 
-MY_EMAIL = os.environ["EMAIL"]
+MY_EMAIL = 'fahuayaro@gmail.com'
 MY_PASSWORD = os.environ["EMAIL_PASSWORD"]
 
 # initialize flask app
