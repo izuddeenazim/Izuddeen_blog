@@ -19,7 +19,7 @@ MY_PASSWORD = os.environ["EMAIL_PASSWORD"]
 
 # initialize flask app
 app = Flask(__name__)
-app.secret_key = '8BYkEfBA6O6donzWlSi&^%khBXox7C0sskKJG'
+app.secret_key = os.environ["SECRET_KEY"]
 
 # connect to database
 db = SQLAlchemy()
