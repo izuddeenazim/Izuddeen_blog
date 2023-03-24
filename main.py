@@ -15,11 +15,11 @@ from flask_gravatar import Gravatar
 
 
 MY_EMAIL = 'fahuayaro@gmail.com'
-MY_PASSWORD = os.environ["EMAIL_PASSWORD"]
+MY_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 # initialize flask app
 app = Flask(__name__)
-app.secret_key = os.environ["SECRET_KEY"]
+app.secret_key = os.getenv("SECRET_KEY")
 
 # connect to database
 db = SQLAlchemy()
